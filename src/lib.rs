@@ -5,6 +5,7 @@
 
 #[macro_use] extern crate log;
 #[macro_use] extern crate clap;
+#[macro_use] extern crate sha1;
 
 extern crate env_logger;
 extern crate lines;
