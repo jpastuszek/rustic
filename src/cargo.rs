@@ -1,7 +1,6 @@
 //! Cargo
 
 use std::env;
-use std::ffi::OsString;
 use std::fs::{File, self};
 use std::io::{BufReader, Read, Write, self};
 use std::os::unix::fs::MetadataExt;
@@ -204,7 +203,7 @@ impl Project {
     }
 
     /// Executes the binary
-    pub fn run<I>(&self, args: I) -> io::Result<Output> where I: Iterator<Item=OsString> {
+    pub fn run(&self, args: Vec<&str>) -> io::Result<Output> {
         let name = self.path().file_stem().unwrap();
         let executable = self.path().join("target/release").join(name);
 
