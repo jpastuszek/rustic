@@ -93,7 +93,7 @@ pub fn run() -> Result<Option<i32>, Error> {
     let clap_result = App::new("rustc")
         .version(&crate_version!()[..])
         .author("Jorge Aparicio <japaricious@gmail.com>")
-        .about("A cargo wrapper that lets you run Rust source files like scripts")
+        .about("Cargo wrapper that lets you run Rust source files like scripts")
         .arg(Arg::with_name("FILE")
             .index(1)
             .help("Rust source file to compile and run")
